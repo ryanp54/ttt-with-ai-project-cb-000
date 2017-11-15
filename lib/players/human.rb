@@ -4,7 +4,7 @@ module Players
     def move(board)
       puts "Enter valid move (1-9):"
       selection = gets.strip
-      sleep(1)
+      sleep(Game::CLI_DELAY)
       selection
     end
   end
