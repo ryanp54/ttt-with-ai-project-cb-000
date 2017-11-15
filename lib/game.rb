@@ -35,6 +35,7 @@ class Game
     complete = false
     player = current_player
     puts "#{player.token}'s turn"
+    sleep(1)
     while !complete
       board.display
       move = player.move(board)
@@ -43,7 +44,6 @@ class Game
         complete = true
       end
     end
-    puts "Valid move submitted."
   end
 
   def play

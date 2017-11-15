@@ -2,12 +2,9 @@ module Players
   class Human < Player
 
     def move(board)
-      puts "Enter move:"
+      puts "Enter valid move (1-9):"
       selection = gets.strip
-      puts "#{self.token} selects #{selection}"
-      puts ""
-      puts ""
-      sleep(0.5)
+      sleep(1)
       selection
     end
   end
