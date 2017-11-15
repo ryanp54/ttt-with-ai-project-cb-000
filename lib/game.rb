@@ -34,6 +34,7 @@ class Game
   def turn
     complete = false
     player = current_player
+    puts "#{player.token}'s turn"
     while !complete
       board.display
       move = player.move(board)
@@ -42,6 +43,7 @@ class Game
         complete = true
       end
     end
+    puts "Valid move submitted."
   end
 
   def play
@@ -50,7 +52,7 @@ class Game
       self.turn
       game_over = true if self.over? || self.won? || self.draw?
     end
-
+    board.display
     if self.winner
       puts "Congratulations #{winner}!"
     else
