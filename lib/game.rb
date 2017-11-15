@@ -35,6 +35,7 @@ class Game
     complete = false
     player = current_player
     while !complete
+      board.display
       move = player.move(board)
       if board.valid_move?(move)
         board.update(move, player)
@@ -44,17 +45,18 @@ class Game
   end
 
   def play
-    game_over = false
+    game_over = self.over?
     while !game_over
-      turn
-      game_over = true if over? || won? || draw?
+      self.turn
+      game_over = true if self.over? || self.won? || self.draw?
     end
 
-    if winner
-      puts "Congradulations #{winner}."
+    if self.winner
+      puts "Congratulations #{winner}!"
     else
       puts "Cat's Game!"
     end
+
   end
 
 end
