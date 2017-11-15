@@ -1,7 +1,11 @@
 module Players
   class Computer < Player
+    attr_accessor :ai
+
     WIN_COMBOS = Game::WIN_COMBINATIONS
     def move(board)
+      #ai = AI.new(self, board)
+
       sleep(Game::CLI_DELAY)
       best_move = winning_move(board)
       if !best_move
