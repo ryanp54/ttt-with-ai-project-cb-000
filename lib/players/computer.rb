@@ -17,7 +17,7 @@ module Players
     def winning_move(board)
       WIN_COMBOS.collect do |combo|
         if combo.select { |position| board.cells[position] == self.token }.size == 2
-          i = combo.find_index { |n| board.cells[n] == "" ||  board.cells[n] == " " }
+          i = combo.find_index { |n| !board.taken?(n + 1) }
           combo[i] + 1 if i
         end
       end.compact[0]
