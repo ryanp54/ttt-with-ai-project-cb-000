@@ -32,7 +32,6 @@ class AI
   end
 
   def pick_move
-    puts moves
     moves.sort_by { |k, v| v }.reverse[0][0]
   end
 
