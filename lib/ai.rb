@@ -1,5 +1,5 @@
 class AI
-  DEFAULT_MOVE_VALUES = {'1'=> 1, '2'=> 0, '3'=> 1, '4'=> 0, '5'=> 8, '6'=> 0, '7'=> 1, '8'=>0, '9'=>1}
+  DEFAULT_MOVE_VALUES = {'1'=> 1, '2'=> 0, '3'=> 1, '4'=> 0, '5'=> 5, '6'=> 0, '7'=> 1, '8'=>0, '9'=>1}
   attr_accessor :player, :board, :win_combos, :moves
 
   def initialize(player, board)
